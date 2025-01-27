@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood-Based Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+<body>
+    <header>
+        <h1>Mood-Based Recommendations</h1>
+    </header>
+
+    <main>
+        <section class="user-text-section">
+            <h2>Your Entered Text:</h2>
+            <p>{{ user_text }}</p>
+        </section>
+        <section class="sentiment-section">
+            <h2>Your Sentiment:</h2>
+            <p>
+                Overall Sentiment: {{ overall_sentiment }}<br>
+                Positive Sentiment: {{ positive_sentiment }}<br>
+                Negative Sentiment: {{ negative_sentiment }}<br>
+                Neutral Sentiment: {{ neutral_sentiment }}
+            </p>
+        </section>
+        <section class="recommendations-section">
+            <h2>Recommended Book:</h2>
+            <p>{{ books }}</p>
+
+            <h2>Recommended Song:</h2>
+            <p>{{ songs }}</p>
+        </section>
+    </main>
+</body>
+</html>

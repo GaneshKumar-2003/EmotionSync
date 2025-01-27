@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood-Based Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mood-Based Recommendations</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Enter your mood:</h2>
+            <form action="/recommendations" method="POST">
+                <label for="user_text">Describe your mood:</label>
+                <input type="text" id="user_text" name="user_text" required>
+                <button type="submit">Get Recommendations</button>
+            </form>
+    </main>
+    <footer>
+        <p>&copy; Team EmotionSync</p>
+    </footer>
+</body>
+</html>
